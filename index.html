@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>Modern Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="weather-card">
-    <div class="search-box">
-      <input type="text" placeholder="Enter city name" spellcheck="false">
-      <button><img src="images/sun.png" alt="Search"></button>
-    </div>
+  <div class="weather-container">
+    <div class="weather-card">
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Enter city name..." spellcheck="false">
+        <button id="search-btn" aria-label="Search">
+          <!-- Scalable SVG Search Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
 
-    <div class="weather">
-      <img src="images/cloud.png" class="weather-icon" alt="Weather condition">
-      <h1 class="temp">--°c</h1>
-      <h2 class="city">City Name</h2>
-      <p class="condition">Condition</p>
+      <div class="weather-info">
+        <img src="images/cloud.png" class="weather-icon" alt="Weather condition">
+        <h1 class="temp">--°C</h1>
+        <h2 class="city">City Name</h2>
+        <p class="condition">Condition</p>
 
-      <div class="details">
-        <div class="col">
-          <img src="images/humidity.png" alt="Humidity">
-          <div>
-            <p class="humidity">--%</p>
-            <span>Humidity</span>
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png" class="detail-icon" alt="Humidity">
+            <div class="detail-text">
+              <p class="humidity">--%</p>
+              <span>Humidity</span>
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <img src="images/cloud.png" alt="Wind Speed">
-          <div>
-            <p class="wind">-- km/h</p>
-            <span>Wind Speed</span>
+          <div class="col">
+            <img src="images/cloud.png" class="detail-icon" alt="Wind Speed">
+            <div class="detail-text">
+              <p class="wind">-- km/h</p>
+              <span>Wind Speed</span>
+            </div>
           </div>
         </div>
       </div>
